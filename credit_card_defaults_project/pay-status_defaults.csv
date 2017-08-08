@@ -1,0 +1,10 @@
+repayment_status,percentage_defaults
+Pay duly,0.15954292
+1 month late,0.336341804
+2 months late,0.554209501
+3 months late,0.624425102
+4 months late,0.61341485
+5 months late,0.545238095
+6 months late,0.552140975
+7 months late,0.777096637
+8 months late,0.58245614
