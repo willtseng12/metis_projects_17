@@ -1,6 +1,6 @@
 ## **Overview**
 
-This is my second project at Metis data science bootcamp. This project utilizes web scraping and linear regression methods to acquire publicly available data on the web to predict movie, and to create a predictive model on a movie's gross profit based off of input features deemed relevant available on the web.
+This is my second project at Metis data science bootcamp. This project utilizes web scraping and linear regression methods to acquire publicly available data on the web to predict movie, and to create a simple predictive model of a movie's gross profit based on input features such as production budget, genres, Fb like, etc.
 
 ## **Data Source**
 
