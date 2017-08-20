@@ -1,7 +1,7 @@
 ## **Overview**
 
 This is my third project at Metis data science bootcamp. This project aims to further increase my exposure to feature selection
-and engineering. Furthermore, it also requires the implementation of classifier algorithms to predict credit card loan defaults.
+and engineering. Furthermore, it also required the implementation of classifier algorithms to predict credit card loan defaults.
 
 ## **Data Source**
 
@@ -11,7 +11,7 @@ of 30,000 Taiwanese credit card client of a commercial bank. The data is availab
 
 ## **Goal**
 
-To predict credit card loan default on October 2005 given the previous 6 months credit card payment information.
+To predict whether a person is goign to default on his or her credit card loan on October 2005 given the previous 6 months credit card payment information and basic account info.
 
 ## **Approach**
 
