@@ -6,3 +6,5 @@ In this repository are the projects that I have completed at Metis during the su
 2. Predicting movie gross profits using scraped data from IMDB, linear regression, and regularization methods  
 3. Catching credit card defaulters in Taiwan using classification algorithms 
 4. Visualizing topic distribution on NYT articles regarding immigration since 1981 through NLP and NMF
+
+
