@@ -18,4 +18,5 @@ Please visit my [blog post](https://willtseng12.github.io/FourthBlog/) for more 
 ## **File Descriptions**
 
 `nyt_urls` contains the **first** set of urls where I used scrapy to pull the full articles from  
-`nyt_urls_add` contains the **second** set of urls where I used scrapy to pull the full articles from
+`nyt_urls_add` contains the **second** set of urls where I used scrapy to pull the full articles from  
+`topic_distr.csv` contains the topic by topic yearly count data for D3 visualization purposes
