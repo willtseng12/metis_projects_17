@@ -16,4 +16,4 @@ Please visit my [blog post](https://willtseng12.github.io/SecondBlog/) for more 
 
 ## **Files**
 `imdb_scrapy.py` is the scrpay code used to scrape movie data off of IMDB  
-`movies729.csv` are the 729 movies scraped off the web, and cleaned
+`movies729.csv` contains the 729 movies scraped off the web, and cleaned
