@@ -15,5 +15,5 @@ To discover whether there were strong early indicators of a movie's success as i
 Please visit my [blog post](https://willtseng12.github.io/SecondBlog/) for more detailed information regarding this project's workflow and results.
 
 ## **Files**
-`imdb_scrapy.py` is the scrpay code used to scrape movie data off of IMDB
+`imdb_scrapy.py` is the scrpay code used to scrape movie data off of IMDB  
 `movies729.csv` are the 729 movies scraped off the web, and cleaned
