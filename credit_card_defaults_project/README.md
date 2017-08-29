@@ -16,3 +16,7 @@ To predict whether a person is goign to default on his or her credit card loan o
 ## **Approach**
 
 Please visit my [blog post](https://willtseng12.github.io/ThirdBlog/) for more detailed information regarding this project's workflow and results.
+
+## **Files**
+`pay_status_D3.html` contains the code for the D3 visualization  
+`pay_status_D3.html` contains the code for the D3 visualization  
