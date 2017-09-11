@@ -1,0 +1,87 @@
+	<!DOCTYPE html>
+	<html>
+	<meta charset="utf-8">
+
+
+	<!-- Tooltip example from http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html -->
+
+	<link rel="stylesheet" href="styles.css">
+	<body>
+
+	<!-- drop down menu -->
+	<p><span><label for="y-axis">Select y-axis</label></span>
+	<select id="y-value">
+	  <option value="MN_EARN_WNE_P10">log_MN_EARN_WNE_P10</option>
+	  <option value="AVGFACSAL">AVGFACSAL</option>
+	  <option value="DEP_INC_AVG">DEP_INC_AVG</option>
+	  <option value="DEP_INC_PCT_LO">DEP_INC_PCT_LO</option>
+	  <option value="DEP_INC_PCT_M1">DEP_INC_PCT_M1</option>  
+	  <option value="DEP_INC_PCT_M2">DEP_INC_PCT_M2</option>
+	  <option value="DEP_STAT_PCT_IND">DEP_STAT_PCT_IND</option>
+	  <option value="DEP_WDRAW_ORIG_YR2_RT">DEP_WDRAW_ORIG_YR2_RT</option>
+	  <option value="FAMINC">FAMINC</option>
+	  <option value="FEMALE">FEMALE</option>
+	  <option value="INC_PCT_LO">INC_PCT_LO</option>
+	  <option value="INC_PCT_M1">INC_PCT_M1</option>
+	  <option value="INC_PCT_M2">INC_PCT_M2</option>
+	  <option value="INC_PCT_H2">INC_PCT_H2</option>
+	  <option value="IND_INC_AVG">IND_INC_AVG</option>
+	  <option value="IND_INC_PCT_LO">IND_INC_PCT_LO</option>
+	  <option value="IND_INC_PCT_M1">IND_INC_PCT_M1</option>
+	  <option value="INEXPFTE">INEXPFTE</option>
+	  <option value="MALE_COMP_ORIG_YR8_RT">MALE_COMP_ORIG_YR8_RT</option>
+	  <option value="MALE_WDRAW_ORIG_YR3_RT">MALE_WDRAW_ORIG_YR3_RT</option>
+	  <option value="NOPELL_COMP_ORIG_YR4_RT">NOPELL_COMP_ORIG_YR4_RT</option>
+	  <option value="NOPELL_COMP_ORIG_YR8_RT">NOPELL_COMP_ORIG_YR8_RT</option>
+	  <option value="NOPELL_WDRAW_ORIG_YR2_RT">NOPELL_WDRAW_ORIG_YR2_RT</option>
+	  <option value="PELL_EVER">PELL_EVER</option>
+	  <option value="UGDS_ASIAN">UGDS_ASIAN</option>
+	  <option value="UGDS_BLACK">UGDS_BLACK</option>
+	  <option value="UGDS_WHITE">UGDS_WHITE</option>
+	  <option value="UGDS_MEN">UGDS_MEN</option>
+	  <option value="UGDS_WOMEN">UGDS_WOMEN</option>
+	</select>
+	<p><span><label for="x-axis">Select x-axis</label></span>
+	<select id="x-value">
+	  <option value="MN_EARN_WNE_P10">log_MN_EARN_WNE_P10</option>
+	  <option value="AVGFACSAL">AVGFACSAL</option>
+	  <option value="DEP_INC_AVG">DEP_INC_AVG</option>
+	  <option value="DEP_INC_PCT_LO">DEP_INC_PCT_LO</option>
+	  <option value="DEP_INC_PCT_M1">DEP_INC_PCT_M1</option>  
+	  <option value="DEP_INC_PCT_M2">DEP_INC_PCT_M2</option>
+	  <option value="DEP_STAT_PCT_IND">DEP_STAT_PCT_IND</option>
+	  <option value="DEP_WDRAW_ORIG_YR2_RT">DEP_WDRAW_ORIG_YR2_RT</option>
+	  <option value="FAMINC">FAMINC</option>
+	  <option value="FEMALE">FEMALE</option>
+	  <option value="INC_PCT_LO">INC_PCT_LO</option>
+	  <option value="INC_PCT_M1">INC_PCT_M1</option>
+	  <option value="INC_PCT_M2">INC_PCT_M2</option>
+	  <option value="INC_PCT_H2">INC_PCT_H2</option>
+	  <option value="IND_INC_AVG">IND_INC_AVG</option>
+	  <option value="IND_INC_PCT_LO">IND_INC_PCT_LO</option>
+	  <option value="IND_INC_PCT_M1">IND_INC_PCT_M1</option>
+	  <option value="INEXPFTE">INEXPFTE</option>
+	  <option value="MALE_COMP_ORIG_YR8_RT">MALE_COMP_ORIG_YR8_RT</option>
+	  <option value="MALE_WDRAW_ORIG_YR3_RT">MALE_WDRAW_ORIG_YR3_RT</option>
+	  <option value="NOPELL_COMP_ORIG_YR4_RT">NOPELL_COMP_ORIG_YR4_RT</option>
+	  <option value="NOPELL_COMP_ORIG_YR8_RT">NOPELL_COMP_ORIG_YR8_RT</option>
+	  <option value="NOPELL_WDRAW_ORIG_YR2_RT">NOPELL_WDRAW_ORIG_YR2_RT</option>
+	  <option value="PELL_EVER">PELL_EVER</option>
+	  <option value="UGDS_ASIAN">UGDS_ASIAN</option>
+	  <option value="UGDS_BLACK">UGDS_BLACK</option>
+	  <option value="UGDS_WHITE">UGDS_WHITE</option>
+	  <option value="UGDS_MEN">UGDS_MEN</option>
+	  <option value="UGDS_WOMEN">UGDS_WOMEN</option>
+	</select>
+
+	<!-- submit button -->
+	<button onclick="setGraph()">submit</button>
+
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+
+
+	</body>
+	</html>
