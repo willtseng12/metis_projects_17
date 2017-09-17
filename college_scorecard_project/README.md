@@ -5,12 +5,11 @@ provided by the US Department of Education by trying to predict the mean earning
 
 It was also an opportunity to further practice handling messy data with lots of missing and provacy suppressed values.
 
-Aside, from the cleaning and predicitive modeling aspect of the project, I also spent a decent amount of effort trying to do interpret the result of
-my predictive model by justifying or 'un-justifying' certain ways to go about variable importance or effect interpretation.
+Aside, from the cleaning and predicitive modeling aspect of the project, I also spent a decent amount of effort trying to interpret the result of my predictive model by justifying or 'un-justifying' certain ways to go about understanding variable importance and effect interpretation.
 
 ## **Data Source**
 
-The dataset on the 2011 - 2012 school year. It is the least sparse dataset among the ones provided
+The dataset on the 2011 - 2012 school year. It is the least sparse dataset among the ones provided.
 
 ## **Goal**
 
