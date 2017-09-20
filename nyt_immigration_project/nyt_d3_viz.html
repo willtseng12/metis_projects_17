@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<svg width="1200" height="600"></svg>
+
+<script src="//d3js.org/d3.v4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.min.js" charset="utf-8"></script>
+
+
+
+<script>
+
+	var svg = d3.select("svg")
+	margin = {top: 70, right: 280, bottom: 20, left: 50},
+	width = svg.attr("width") - margin.left - margin.right,
+	height = svg.attr("height") - margin.top - margin.bottom;
+
+	var parseDate = d3.timeParse("%Y");
+
+	var x = d3.scaleTime().range([0, width]),
+	y = d3.scaleLinear().range([height, 0]),
+	z = d3.scaleOrdinal(d3.schemeCategory20);
+
+	var stack = d3.stack();
+
+	var area = d3.area()
+		.x(function(d, i) { return x(d.data.year); })
+		.y0(function(d) { return y(d[0]); })
+		.y1(function(d) { return y(d[1]); })
+		.curve(d3.curveBasis);
+
+	var g = svg.append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+	d3.csv("nyt_topic_distr.csv", type, function(error, data) {
+		if (error) throw error;
+
+		var keys = data.columns.slice(1);
+
+		x.domain(d3.extent(data, function(d) { return d.year; }));
+		z.domain(keys);
+		stack.keys(keys);
+
+		var layer = g.selectAll(".layer")
+			.data(stack(data))
+			.enter().append("g")
+			.attr("class", "layer");
+
+		layer.append("path")
+			.attr("class", "area")
+			.style("fill", function(d) { return z(d.key); })
+			.attr("d", area);
+
+		g.append("g")
+			.attr("class", "axis axis--x")
+			.attr("transform", "translate(0," + height + ")")
+			.call(d3.axisBottom(x));
+
+		g.append("g")
+			.attr("class", "axis axis--y")
+			.call(d3.axisLeft(y).ticks(10, "%"));
+
+		//CLICK
+
+		svg.on("click", function() {
+			svg.selectAll(".layer")
+			.style("fill", function(d, i) { return z(d.key); })
+			.on("click", function(d) {
+				d3.selectAll(".layer").attr("opacity", 0.05);
+				d3.select(this).attr("opacity", 1);
+			})
+		})
+
+		// LEGEND
+
+		svg.append("g")
+			.attr("class", "legendOrdinal")
+			.attr("transform", "translate(" + [width + margin.left + 25, margin.top + 20] + ")");
+
+		var legendOrdinal = d3.legendColor()
+			.shape("path", d3.symbol().type(d3.symbolSquare).size(300)())
+			.shapeWidth(100)
+			.shapePadding(10)
+			.scale(z);
+
+		svg.select(".legendOrdinal")
+			.call(legendOrdinal);
+
+		//TITLE
+
+		svg.append("text")
+			.attr("x", (width / 1.8))             
+			.attr("y", (margin.top)-20)
+			.attr("text-anchor", "middle")
+			.attr("font-weight", "bold")  
+			.style("font-size", "30px") 
+			.style("text-decoration", "underline")
+			.text("NYT Immigration Topic Distribution through Time");
+		});
+
+	function type(d, i, columns) {
+		d.year = parseDate(d.year);
+		for (var i = 1, n = columns.length; i < n; ++i) d[columns[i]] = d[columns[i]] / 100;
+			return d;
+	}
+
+</script>
