@@ -11,7 +11,7 @@ of 30,000 Taiwanese credit card client of a commercial bank. The data is availab
 
 ## **Goal**
 
-To predict whether a person is goign to default on his or her credit card loan on October 2005 given the previous 6 months credit card payment information and basic account info.
+To predict whether a person is going to default on his or her credit card loan on October 2005 given the previous 6 months credit card payment history and basic account info.
 
 ## **Approach**
 
