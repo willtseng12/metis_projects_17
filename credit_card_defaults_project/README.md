@@ -17,8 +17,3 @@ To predict whether a person is goign to default on his or her credit card loan o
 
 Please visit my [blog post](https://willtseng12.github.io/ThirdBlog/) for more detailed information regarding this project's workflow and results.
 
-## **Files**
-`UCI_Credit_Card.csv` is the original dataset  
-`pay-status_defaults.csv` contains the default rate by late payment status information  
-`pay_status_D3.html` contains the code for the D3 visualization  
-
