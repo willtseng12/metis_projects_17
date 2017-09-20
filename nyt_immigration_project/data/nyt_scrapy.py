@@ -16,8 +16,11 @@ class NYTSpider(scrapy.Spider):
         "HTTPCACHE_ENABLED": True,
     }
 
-    # retreiving the url list
-    with open("nyt_add_urls.txt", "r") as urls:
+    # retreiving the url list (both the original and additional)
+    with open("nyt_urls.txt", "r") as urls:
+        for url in urls:
+            url_list.append(url)
+    with open("nyt_urls_add.txt", "r") as urls:
         for url in urls:
             url_list.append(url)
 
