@@ -32,4 +32,4 @@ df <- convertType(df, categorical)
 imputed3de <- mice(df, m = 2, maxit = 1, method = 'cart', seed = 1111)
 
 # write to csv
-write.csv(complete(imputed3de, action = 'long', inc =TRUE), "imputed3de.csv")
+# write.csv(complete(imputed3de, action = 'long', inc =TRUE), "imputed.csv")
