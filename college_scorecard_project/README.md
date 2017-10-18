@@ -28,5 +28,3 @@ not explored by the paper to see how well we can predict earnings while keeping 
 Please visit my [blog post](https://willtseng12.github.io/FifthBlog/) for more detailed information regarding this project's workflow and results.
 (blog not available yet)
 
-## **File Descriptions**
-
