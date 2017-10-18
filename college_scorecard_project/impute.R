@@ -29,7 +29,7 @@ convertType <- function(df, categorical){
 df <- convertType(df, categorical)
 
 # Impute  using CART
-imputed3de <- mice(df, m = 2, maxit = 1, method = 'cart', seed = 1111)
+imputed <- mice(df, m = 2, maxit = 1, method = 'cart', seed = 1111)
 
 # write to csv
-# write.csv(complete(imputed3de, action = 'long', inc =TRUE), "imputed.csv")
+write.csv(complete(imputed3de, action = 'long', inc =TRUE), "imputed.csv")
